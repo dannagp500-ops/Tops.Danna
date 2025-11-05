@@ -160,48 +160,6 @@ displayMovies();
   { title:"Avatar: El Camino del Agua (2025)", desc:"Jake Sully y Neytiri exploran los océanos de Pandora.", poster:"https://via.placeholder.com/150x220?text=Avatar2", opinions:["Increíble mundo visual.","Historia simple para algunos.","Efectos impresionantes y emocionante."] }
 ];
 
-// Elementos del DOM
-const movieList = document.getElementById("movieList");
-const movieContent = document.getElementById("movieContent");
-const searchInput = document.getElementById("searchInput");
-
-// Función para mostrar película en el contenido
-function showMovie(movie){
-  movieContent.innerHTML = `
-    <div class="movie-container">
-      <img src="${movie.poster}" alt="${movie.title}">
-      <div class="movie-info">
-        <h2 class="movie-title">${movie.title}</h2>
-        <p class="movie-desc">${movie.desc}</p>
-        <div class="opinions"><b>Opiniones:</b>
-          <ul>
-            <li>👍 ${movie.opinions[0]}</li>
-            <li>😐 ${movie.opinions[1]}</li>
-            <li>👎 ${movie.opinions[2]}</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-// Función para mostrar lista de películas
-function displayMovies(filter=""){
-  movieList.innerHTML="";
-  movies.filter(m => m.title.toLowerCase().includes(filter.toLowerCase()))
-        .forEach(m => {
-          const li = document.createElement("li");
-          li.textContent = m.title;
-          li.onclick = () => showMovie(m);
-          movieList.appendChild(li);
-        });
-}
-
-// Buscar por input
-searchInput.addEventListener("input", () => displayMovies(searchInput.value));
-
-// Mostrar todas las películas al cargar
-displayMovies();
 </script>
 </body>
 </html>
