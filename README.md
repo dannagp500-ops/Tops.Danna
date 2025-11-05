@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -123,7 +123,6 @@ displayMovies();
 </html>
 
 
-<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -247,7 +246,7 @@ function reiniciar(){
 </html>
 
 
-<!doctype html>
+
 <html lang="es">
 <head>
   <meta charset="utf-8" />
